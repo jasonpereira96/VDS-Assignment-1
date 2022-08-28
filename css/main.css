@@ -1,0 +1,82 @@
+:root {
+  --teal: #339999;
+  --primary: var(--teal);
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  color: var(--primary);
+}
+header {
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  padding: 25px 10%;
+}
+header .name {
+  flex: 1;
+  font-size: 35px;
+  justify-content: center;
+  padding: 12px;
+  align-items: center;
+}
+header .nav {
+  /* flex: 1; */
+  display: flex;
+}
+header .nav .nav-item {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 12px;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.featured {
+  padding: 120px 10%;
+  background-color: var(--primary);
+  color: white;
+}
+.featured .name, .featured .title, .featured .desc {
+  text-align: center;
+}
+.featured .name {
+  font-size: 60px;
+}
+.featured .title {
+  font-size: 30px;
+}
+.featured .desc {
+  font-size: 15px;
+}
+
+section.info {
+  padding: 80px 10%;
+}
+
+section.info .title {
+  /* font-size: 32px; */
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+section.info .line-wrapper {
+  display: flex;
+  padding: 15px 0 18px 0;
+  justify-content: center;
+  align-items: center;
+}
+section.info .line-wrapper span {
+  width: 75px;
+  height: 3px;
+  background-color: var(--primary);
+}
+section.info p.desc {
+  font-size: 16px;
+  margin: 0;
+}
