@@ -62,45 +62,82 @@
     <section class="info">
       <h1 class="title">About Me</h1>
       <svg width="500" height="500" id="svg-root">
-        <circle id="orange-circle" r="30" cx="50" cy="50" fill="orange" />
-        <circle id="red-circle" r="30" cx="50" cy="150" fill="red" />
-        <circle id="pink-circle" r="30" cx="50" cy="250" fill="pink" />
+        <circle id="orange-circle" r="30" cx="80" cy="80" fill="orange" onclick="onCircleClick(1)"/>
+        <circle id="red-circle" r="30" cx="80" cy="150" fill="red" onclick="onCircleClick(2)"/>
+        <circle id="pink-circle" r="30" cx="80" cy="280" fill="pink" onclick="onCircleClick(3)"/>
 
-        
-        <animate 
-          xlink:href="#orange-circle"
-          attributeName="cx"
-          from="50"
-          to="450" 
-          dur="2s"
-          begin="click"
-          values="50; 450; 50" 
-          keytimes="0; 0.5; 1" 
-          repeatcount="indefinite"
-          fill="freeze" 
-        />
+      
         <animate 
           id="red-circle-animation"
           xlink:href="#red-circle"
-          attributeName="cx"
-          from="50"
-          to="450" 
-          dur="3s"
-          begin="click"
+          attributeName="cy"
+          from="80"
+          to="420" 
+          dur="4s"
           values="50; 450; 50" 
           keytimes="0; 0.5; 1" 
           repeatcount="indefinite"
           fill="freeze" 
         />
         <animate 
+          id="red-circle-animation-2"
+          xlink:href="#red-circle"
+          attributeName="x"
+          from="30"
+          to="60" 
+          dur="0.7s"
+          values="30; 45; 60; 45; 30;" 
+          keytimes="0; 0.25; 0.5; 0.75; 1" 
+          repeatcount="indefinite"
+          fill="freeze" 
+        />
+
+        <animate 
+          id="orange-circle-animation"
+          xlink:href="#orange-circle"
+          attributeName="cx"
+          from="80"
+          to="420" 
+          dur="3s"
+          values="50; 420; 50" 
+          keytimes="0; 0.5; 1" 
+          repeatcount="indefinite"
+          fill="freeze" 
+        />
+        <animate 
+          id="orange-circle-animation-2"
+          xlink:href="#orange-circle"
+          attributeName="x"
+          from="30"
+          to="60" 
+          dur="0.7s"
+          values="30; 45; 60; 45; 30;" 
+          keytimes="0; 0.25; 0.5; 0.75; 1" 
+          repeatcount="indefinite"
+          fill="freeze" 
+        />
+
+        <animate 
+          id="pink-circle-animation"
           xlink:href="#pink-circle"
           attributeName="cx"
-          from="50"
-          to="450" 
-          dur="1.5s"
-          begin="click"
-          values="50; 450; 50" 
+          from="80"
+          to="420" 
+          dur="3.5s"
+          values="50; 420; 50" 
           keytimes="0; 0.5; 1" 
+          repeatcount="indefinite"
+          fill="freeze" 
+        />
+        <animate 
+          id="pink-circle-animation-2"
+          xlink:href="#pink-circle"
+          attributeName="x"
+          from="30"
+          to="60" 
+          dur="0.7s"
+          values="30; 45; 60; 45; 30;" 
+          keytimes="0; 0.25; 0.5; 0.75; 1" 
           repeatcount="indefinite"
           fill="freeze" 
         />
@@ -108,13 +145,5 @@
       
     </section>
   </body>
-  <script>
-    const svgRoot = document.getElementById("svg-root");
-    svgRoot.addEventListener("load", function() {
-      let redCircleAnimation = document.getElementById("red-circle-animation");
-      redCircleAnimation.setAttribute("attributeName", "cy");
-      // redCircleAnimation.values = "";
-
-    });
-  </script>
+  <script src="js/main.js"></script>
 </html>

@@ -86,3 +86,8 @@ svg {
   display: block;
   margin: 1em auto;
 }
+
+svg circle:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
