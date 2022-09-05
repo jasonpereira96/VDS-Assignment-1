@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <script type="" src="jquery/jquery.js"></script>
+    <!-- <link rel="stylesheet" href="css/colors.css" type="text/css"/> -->
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="name">
+        <a href="https://uic.edu" target="_blank"><img src="img/logo.svg"/></a>
+      </div>
+      <div class="nav">
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item"><a href="credits.html">Credits</a></div>
+        <div class="nav-item"><a href="animation.html">Animation</a></div>
+      </div>
+    </header>
+    <section class="featured featured-image">
+      <img src="img/arc.jpeg"/>
+    </section>
+    <section class="featured" style="display: none;">
+      <div class="name"><b>Jason Pereira</b></div>
+      <div class="title">University of Illinois at Chicago</div>
+      <p class="desc">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Facere ipsa necessitatibus voluptate. 
+        Dolores sed neque, accusantium iusto inventore harum quibusdam, aspernatur, 
+        ullam vero ea eos ipsam tenetur dolore qui voluptatibus!
+      </div>
+    </section>
+    <section class="name-info">
+      <img src="img/circle.svg"/>
+      <div class="wrapper">
+        <div><b>Jason Pereira</b></div>
+        <div>University of Illinois at Chicago</div>
+      </div>
+
+    </section>
+    <section class="info">
+        <h1 class="title">SVG Animation</h1>
+        <div class="line-wrapper">
+            <span></span>
+        </div>
+        <p class="desc" style="text-align: center;">
+            Click on a circle to toggle the second animation!
+        </p>
+        <br/>
+        <br/>
+        <svg width="500" height="500" id="svg-root">
+          <circle id="orange-circle" r="30" cx="80" cy="80" fill="orange" onclick="onCircleClick(1)"/>
+          <circle id="red-circle" r="30" cx="80" cy="150" fill="red" onclick="onCircleClick(2)"/>
+          <circle id="pink-circle" r="30" cx="80" cy="280" fill="pink" onclick="onCircleClick(3)"/>
+  
+        
+          <animate 
+            id="red-circle-animation"
+            xlink:href="#red-circle"
+            attributeName="cy"
+            from="80"
+            to="420" 
+            dur="4s"
+            values="50; 450; 50" 
+            keytimes="0; 0.5; 1" 
+            repeatcount="indefinite"
+            fill="freeze" 
+          />
+          <animate 
+            id="red-circle-animation-2"
+            xlink:href="#red-circle"
+            attributeName="x"
+            from="30"
+            to="60" 
+            dur="0.7s"
+            values="30; 45; 60; 45; 30;" 
+            keytimes="0; 0.25; 0.5; 0.75; 1" 
+            repeatcount="indefinite"
+            fill="freeze" 
+          />
+  
+          <animate 
+            id="orange-circle-animation"
+            xlink:href="#orange-circle"
+            attributeName="cx"
+            from="80"
+            to="420" 
+            dur="3s"
+            values="50; 420; 50" 
+            keytimes="0; 0.5; 1" 
+            repeatcount="indefinite"
+            fill="freeze" 
+          />
+          <animate 
+            id="orange-circle-animation-2"
+            xlink:href="#orange-circle"
+            attributeName="x"
+            from="30"
+            to="60" 
+            dur="0.7s"
+            values="30; 45; 60; 45; 30;" 
+            keytimes="0; 0.25; 0.5; 0.75; 1" 
+            repeatcount="indefinite"
+            fill="freeze" 
+          />
+  
+          <animate 
+            id="pink-circle-animation"
+            xlink:href="#pink-circle"
+            attributeName="cx"
+            from="80"
+            to="420" 
+            dur="3.5s"
+            values="50; 420; 50" 
+            keytimes="0; 0.5; 1" 
+            repeatcount="indefinite"
+            fill="freeze" 
+          />
+          <animate 
+            id="pink-circle-animation-2"
+            xlink:href="#pink-circle"
+            attributeName="x"
+            from="30"
+            to="60" 
+            dur="0.7s"
+            values="30; 45; 60; 45; 30;" 
+            keytimes="0; 0.25; 0.5; 0.75; 1" 
+            repeatcount="indefinite"
+            fill="freeze" 
+          />
+        </svg>
+        
+      </section>
+      <footer></footer>
+      <script src="js/main.js"></script>
+  </body>
+</html>

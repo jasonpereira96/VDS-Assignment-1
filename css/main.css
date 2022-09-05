@@ -1,28 +1,41 @@
 :root {
   --teal: #339999;
-  --primary: var(--teal);
+  --dark-blue: #001e62;
+  --primary: var(--dark-blue);
   --white: #ffffff;
+  --side-padding: 20%;
+  --section-side-padding: 10%;
 }
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  padding: 0 var(--side-padding);
+  background-color: var(--primary);
 }
 h1 {
   color: var(--primary);
 }
 header {
-  background-color: var(--primary);
-  color: white;
+  background-color: white;
+  color: var(--dark-blue);
   display: flex;
-  padding: 25px 10%;
+  padding: 25px;
+}
+a {
+  text-decoration: none;
+  color: var(--primary);
 }
 header .name {
   flex: 1;
   font-size: 35px;
-  justify-content: center;
-  padding: 12px;
+  justify-content: flex-start;
+  padding: 0;
+  max-height: 300px;
   align-items: center;
+}
+header img {
+  max-width: 300px;
 }
 header .nav {
   /* flex: 1; */
@@ -37,10 +50,22 @@ header .nav .nav-item {
   text-transform: uppercase;
 }
 
+header .nav .nav-item:hover {
+  text-decoration: underline;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 .featured {
-  padding: 120px 10%;
+  padding: 120px var(--section-side-padding);
   background-color: var(--primary);
   color: white;
+}
+.featured-image {
+  padding: 0;
+}
+.featured-image img {
+  width: 100%;
 }
 .featured .name, .featured .title, .featured .desc {
   text-align: center;
@@ -54,9 +79,43 @@ header .nav .nav-item {
 .featured .desc {
   font-size: 15px;
 }
+.jason-wrapper {
+  padding: 15px 0 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jason-wrapper img {
+  width: 50%;
+}
+
+.name-info {
+  background: white;
+  position: relative;
+  padding: 0 25px;
+}
+
+.name-info img {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  bottom: 40px;
+  left: 25px;
+}
+
+.name-info .wrapper {
+  padding-top: 10px;
+}
+
+.name-info .wrapper > div {
+  color: var(--primary);
+  text-align: right;
+  font-size: 24px;
+}
 
 section.info {
-  padding: 80px 10%;
+  padding: 80px var(--section-side-padding);
+  background-color: white;
 }
 
 section.info .title {
@@ -90,4 +149,8 @@ svg {
 svg circle:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+footer {
+  padding: 30px 0;
 }
