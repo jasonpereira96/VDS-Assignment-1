@@ -48,12 +48,24 @@ header .nav .nav-item {
   padding: 12px;
   align-items: center;
   text-transform: uppercase;
+  margin-left: 5px;
+}
+header .nav .nav-item.active {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+header .nav .nav-item.active {
+  color: white;
 }
 
 header .nav .nav-item:hover {
-  text-decoration: underline;
-  transform: scale(1.2);
+  /* text-decoration: underline; */
+  /* transform: scale(1.2); */
+  background-color: var(--primary);
+  border-radius: 10px;
   cursor: pointer;
+  color: white;
 }
 
 .featured {
