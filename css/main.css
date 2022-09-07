@@ -159,7 +159,7 @@ svg {
   margin: 1em auto;
 }
 
-svg circle:hover {
+svg circle:hover, svg rect:hover, svg polygon:hover {
   cursor: pointer;
   opacity: 0.5;
 }

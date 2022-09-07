@@ -4,6 +4,12 @@ const isResizing = {
     3: false
 };
 
+const isAnimating = {
+    triangle: false,
+    square: false,
+    circle: false
+}
+
 function getDomId(id) {
     switch(id) {
         case 1: return "orange-circle";
@@ -24,13 +30,36 @@ function disableAnimation(domId) {
     animationEl.setAttribute("attributeName", "x");
 }
 
-const onCircleClick = id => {
-    let domId = getDomId(id)
-    if (isResizing[id]) {
-        enableAnimation(domId)
+const onCircleClick = () => {
+    const circleAnimation = document.getElementById("pink-circle-animation-2");
+    if (isAnimating.circle) {
+        circleAnimation.setAttribute("dur", "0s");
     } else {
-        disableAnimation(domId)
+        circleAnimation.setAttribute("dur", "0.7s");
     }
-    isResizing[id] = !isResizing[id];
+    isAnimating.circle = !isAnimating.circle;
 }
-    
+
+const onTriangleClick = () => {
+    const triangleAnimation = document.getElementById("triangle-animation");
+    if (isAnimating.triangle) {
+        triangleAnimation.setAttribute("dur", "0s");
+    } else {
+        triangleAnimation.setAttribute("dur", "4s");
+    }
+    isAnimating.triangle = !isAnimating.triangle;
+}
+
+const onSquareClick = () => {
+    const squareAnimation2 = document.getElementById("square-animation-2");
+    const squareAnimation3 = document.getElementById("square-animation-3");
+
+    if (isAnimating.square) {
+        squareAnimation2.setAttribute("dur", "0.7s");
+        squareAnimation3.setAttribute("dur", "0.7s");
+    } else {
+        squareAnimation2.setAttribute("dur", "0s");
+        squareAnimation3.setAttribute("dur", "0s");
+    }
+    isAnimating.square = !isAnimating.square;
+}
